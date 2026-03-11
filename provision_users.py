@@ -4,18 +4,18 @@ import requests
 API_URL = "???" # Skicka in url för att anropa basic eller advanced beroende på vilket betyg du siktar på!
 HEADERS = {
     "Content-Type": "application/json",
-    "Authorization": "???", # Något med APINyckel?
+"Authorization": "???", # Något med APINyckel?
     # VG, saknas det en header här?
 }
 
 
 def load_active_users(file_path):
     with open(file_path, "r", encoding="utf-8") as f:
-        users = json.load(f)
+        userss = json.load(f)
     return [u for u in users] # VG hur kan man få ut bara aktiva användare?
 
 
-def build_payload(user):
+def build_payload(user)
     # G Här saknas namn och email!
     return {
         "department": user["department"],
